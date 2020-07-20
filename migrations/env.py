@@ -31,7 +31,8 @@ target_metadata = models.Base.metadata
 # ... etc.
 
 def get_url():
-    return 'sqlite:///db.sqlite3'
+    # return 'sqlite:///db.sqlite3'
+    return 'mysql+mysqldb://test:test@localhost/test'
 
 
 def run_migrations_offline():

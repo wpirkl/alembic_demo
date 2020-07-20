@@ -78,12 +78,12 @@ class TableA(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(30), nullable=False, unique=True)
-    # table_b = Column(Integer, ForeignKey('table_b.id'), nullable=False)
+    table_b = Column(Integer, ForeignKey('table_b.id'), nullable=False)
 
 
 class TableB(Base):
     __tablename__ = 'table_b'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(30), nullable=False, unique=True)
+    # name = Column(String(30), nullable=False, unique=True)
 
